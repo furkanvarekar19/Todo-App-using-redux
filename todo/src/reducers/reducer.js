@@ -1,11 +1,22 @@
-// import { ADDTODO,REMOVETODO } from "../action/action";
 
 const initialState = {
-    todos: []
+    todos: [],
   };
 
 const todoReducer = (state = initialState , action) =>{
-   switch(action.type){
+   switch (action.type){
+    case 'ADDTODO':
+      return {
+        ...state,
+        todos:[...state.todos ,action.payload],
+      };
+      case 'REMOVETODO':
+        return{
+          ...state,
+        }
+
+      default:
+        return state;
  
    }
 }

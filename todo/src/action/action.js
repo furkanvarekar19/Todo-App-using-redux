@@ -1,14 +1,15 @@
-// action types
-export const ADDTODO = "ADDTODO";
-export const REMOVETODO = "REMOVETODO";
+
 
 // action creators
-const addtodo = () =>{
-    return {type: ADDTODO};
-};
-const removetodo = () =>{
-    return {type: REMOVETODO};
-};
+ export const addtodo = (todo) =>({
+    type: 'ADDTODO',
+    payload : todo,
+ });
+
+ export const removetodo = (index) =>({
+    type: 'REMOVETODO',
+    payload : index,
+});
 
 
 

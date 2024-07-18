@@ -3,7 +3,6 @@
 
 *{
   box-sizing: border-box;
-  font-family: "Playwrite NG Modern", cursive;
   font-weight: 600;
 
 }
@@ -17,6 +16,8 @@ body{
 }
 .App h1{
   /* color: rgba(142, 142, 142, 0.8); */
+  font-family: "Playwrite NG Modern", cursive;
+
   font-size: 40px;
   letter-spacing: 2px;
   text-shadow: 3px 2px 3px rgb(211, 2, 2);
@@ -64,6 +65,9 @@ li{
   width: 100%;
 }
 .remove{
-  /* background-color: blue; */
   margin-left: 25px;
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  letter-spacing: 1px;
 }

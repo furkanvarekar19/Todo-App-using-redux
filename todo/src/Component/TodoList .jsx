@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import {addtodo} from '../action/action'
+import {addtodo,removetodo} from '../action/action'
 
 function TodoList () {
    const[data , setData] = useState('');
@@ -14,7 +14,6 @@ function Submittodo(){
     
 }
 
-
   return (
     <div className='todo_main'>
         <input type="text" value={data}  onChange={(event)=> setData(event.target.value)} placeholder='Add your todo'/>
@@ -24,7 +23,8 @@ function Submittodo(){
         {todos.map((todo, index) => (
           <li key={index}>
            {todo} 
-           {/* <button className='remove'>Remove</button>  */}
+           <button className='remove' onClick={() => dispatch(removetodo(index))}>Remove</button> 
+          
           </li>
         ))}
         

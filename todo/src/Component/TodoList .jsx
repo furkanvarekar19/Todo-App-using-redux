@@ -18,18 +18,20 @@ function Submittodo(){
     <div className='todo_main'>
         <input type="text" value={data}  onChange={(event)=> setData(event.target.value)} placeholder='Add your todo'/>
         <button onClick={Submittodo} className='add'>Add</button>
-
+         <div className='list'>
         <ul>
         {todos.map((todo, index) => (
-          <li key={index}>
+          <div className='list-item'>
+          <li key={index}> 
            {todo} 
-           <button className='remove' onClick={() => dispatch(removetodo(index))}>Remove</button> 
+           <button className='remove' onClick={() => dispatch(removetodo(index))}><i class="fa-solid fa-trash"></i></button> 
           
           </li>
+          </div>
         ))}
         
         </ul>
-            
+       </div> 
     </div>
   )
 }

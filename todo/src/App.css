@@ -12,19 +12,18 @@ body{
 }
 .App{
   text-align: center;
-  position: relative;
+  
 }
 .App h1{
   /* color: rgba(142, 142, 142, 0.8); */
   font-family: "Playwrite NG Modern", cursive;
-
   font-size: 40px;
   letter-spacing: 2px;
   text-shadow: 3px 2px 3px rgb(211, 2, 2);
 }
 input{
   height: 37px;
-  width: 23%;
+  width: 32%;
   border: none;
   outline: none;
   border: 2px solid #000;
@@ -39,35 +38,72 @@ input{
   height: 33px;
   font-size: 18px;
   font-weight: 600;
-  width: 7%;
+  width: 8%;
   margin-left: 8px;
   border-radius: 5px;
 }
-ul{
-  position: absolute;
-  top: 100%;
-  left: 32%;
-  width: 30%;
-  display: block;
+.list{
+  /* height: 500px; */
+  width: 100%;
   /* border: 1px solid #000; */
-  
+    display: flex;
+  justify-content: center;
+ /* text-align: center; */
+}
+
+ul{
+  /* border: 1px solid #000; */
+  width: 25%;
 }
 li{
-  margin-bottom: 12px;
-  padding: 6px;
-  list-style-type: none;
-  font-size: 20px;
-  border-radius: 10px;
-  font-weight: 600;
-  border: 2px solid rgb(81, 1, 1);
-  color: #000;
-  background-color: #fff;
-  width: 100%;
+ list-style-type: none;
+ width: 100%;
+ /* border: 1px solid #000; */
+ padding: 7px 10px;
+ background-color: #fcfcfc;
+ margin-bottom: 15px;
+ border: 2px solid #000;
+ border-radius: 8px;
+ font-size: 18px;
 }
 .remove{
-  margin-left: 25px;
-  padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  margin-left: 15px;
+  /* background-color: #232121; */
+  border: none;
+  outline: none;
+ color: #000;
+  font-size: 18px;
+  padding: 3px 10px;
   border-radius: 5px;
-  letter-spacing: 1px;
+}
+@media screen and (min-width: 767px) and (max-width: 1200px) {
+  input{
+    width: 35%;
+  }
+  ul{
+    /* border: 1px solid #000; */
+    width: 45%;
+  }
+  li{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  input{
+    width: 65%;
+    font-size: 15px;
+  }
+  .add{
+   width: 16%;
+   font-size: 15px;
+  }
+  ul{
+    /* border: 1px solid #000; */
+    width: 90%;
+  }
+  li{
+    width: 100%;
+  }
 }

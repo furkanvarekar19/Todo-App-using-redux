@@ -24,7 +24,7 @@ function Submittodo(){
         {todos.map((todo, index) => (
           <li key={index}>
            {todo} 
-           <button className='remove'>Remove</button> 
+           {/* <button className='remove'>Remove</button>  */}
           </li>
         ))}
         
